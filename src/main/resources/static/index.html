@@ -8,6 +8,46 @@
     <title>Final Exam</title>
 </head>
 <body>
+    <h3>Masukkan Data Penduduk</h3>
+    
+    <table>
+        <tr>
+            <td>ID</td>
+            <td><input type="text" id="id" name="id" placeholder="Masukkan ID"/></td>
+        </tr>
+        <tr>
+            <td>NIK</td>
+            <td><input type="text" id="nik" name="nik" placeholder="Masukkan NIK"/></td>
+        </tr>
+        <tr>
+            <td>Nama</td>
+            <td><input type="text" id="name" name="name" placeholder="Masukkan Nama"/></td>
+        </tr>
+        <tr>
+            <td>Tanggal Lahir</td>
+            <td><input type="date" id="tglLahir" name="date"/></td>
+        </tr>
+        <tr>
+            <td>Photo</td>
+            <td><input type="file" id="photo" name="photo"/></td>
+        </tr>
+        <tr>
+            <td>TimeStamp</td>
+            <td><input type="time" id="timestamp" name="time" placeholder="Masukkan ID"/></td>
+        </tr>
+        <tr>
+            <td><button onclick="get()">GET FROM WEB SERVICE</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="post()">POST FROM WEB SERVICE</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="put()">PUT FROM WEB SERVICE</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="del()">DELETE FROM WEB SERVICE</button></td>
+        </tr>
+    </table>
     <script>
         function get(){
             const urlg= "http://localhost:8080/GET";
@@ -24,8 +64,8 @@
             const url="http://localhost:8080/POST";
             let ID=document.getElementById("id").value;
             let NIK=document.getElementById("nik").value;
-            let name=document.getElementById("name").value;
-            let tgl_lahir=document.getElementById("tgl_lahir").value;
+            let name=document.getElementById("nama").value;
+            let tgl_lahir=document.getElementById("tglLahir").value;
             let photo = document.getElementById("photo").value;
             let ts=document.getElementById("time").value;
             let dataText={id:postID,nik:postNIK,name:name,tgl_lahir:tgl_lahir}
@@ -46,8 +86,8 @@
             const urlp="http://localhost:8080/PUT";
             let ID=document.getElementById("id").value;
             let NIK=document.getElementById("nik").value;
-            let name=document.getElementById("name").value;
-            let tgl_lahir=document.getElementById("tgl_lahir").value;
+            let name=document.getElementById("nama").value;
+            let tgl_lahir=document.getElementById("tglLahir").value;
             let photo = document.getElementById("photo").value;
             let ts=document.getElementById("time").value;
             let dataText={id:postID,nik:postNIK,name:name,tgl_lahir:tgl_lahir}
@@ -68,8 +108,8 @@
             const urld="http://localhost:8080/DELETE";
             let ID=document.getElementById("id").value;
             let NIK=document.getElementById("nik").value;
-            let name=document.getElementById("name").value;
-            let tgl_lahir=document.getElementById("tgl_lahir").value;
+            let name=document.getElementById("nama").value;
+            let tgl_lahir=document.getElementById("tglLahir").value;
             let photo = document.getElementById("photo").value;
             let ts=document.getElementById("time").value;
             let dataText={id:postID,nik:postNIK,name:name,tgl_lahir:tgl_lahir}
@@ -87,46 +127,5 @@
             });
         }
     </script>
-    <h3>Masukkan Data Penduduk</h3>
-    
-    <table>
-        <tr>
-            <td>ID</td>
-            <td><input type="text" id="id" name="id" placeholder="Masukkan ID"/></td>
-        </tr>
-        <tr>
-            <td>NIK</td>
-            <td><input type="text" id="nik" name="nik" placeholder="Masukkan NIK"/></td>
-        </tr>
-        <tr>
-            <td>Nama</td>
-            <td><input type="text" id="name" name="name" placeholder="Masukkan Nama"/></td>
-        </tr>
-        <tr>
-            <td>Tanggal Lahir</td>
-            <td><input type="date" id="tgl_lahir" name="date"/></td>
-        </tr>
-        <tr>
-            <td>Photo</td>
-            <td><input type="file" id="foto" name="photo"/></td>
-        </tr>
-        <tr>
-            <td>TimeStamp</td>
-            <td><input type="time" id="time" name="time" placeholder="Masukkan ID"/></td>
-        </tr>
-        <tr>
-            <td><button onclick="get()">GET FROM WEB SERVICE</button></td>
-        </tr>
-        <tr>
-            <td><button onclick="post()">POST FROM WEB SERVICE</button></td>
-        </tr>
-        <tr>
-            <td><button onclick="put()">PUT FROM WEB SERVICE</button></td>
-        </tr>
-        <tr>
-            <td><button onclick="del()">DELETE FROM WEB SERVICE</button></td>
-        </tr>
-    </table>
-    
 </body>
 </html>
